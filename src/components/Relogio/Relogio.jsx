@@ -14,7 +14,18 @@ function Relogio() {
 }, []);
 
     return (
-        
+        <div className={styles.relogioContainer}>
+            <h2>Componente React</h2>
+            <p className={styles.hora}>{horaAtual.toLocalTime}</p>
+            <p className={styles.data}>
+                {horaAtual.toLocalDateString("pt-BR", {
+                weekday: "long",
+                day: "numeric", 
+                month: "long", 
+                year: "numeric"
+                })}
+            </p>
+        </div>
     );
 
 }
